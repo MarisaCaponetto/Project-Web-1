@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box; /*para que los elementos no crezcan cuando le asignemos padding- espacio interno*/
+}
+body {
+    font-family: "Roboto";
+    font-size: 13px;
+    color: black;
+}
+a {
+    display: inline-block; /*Son bloques que se pueden poner uno al lado del otro y cuyo alto se les puede dar.*/
+}
+p {
+    color: black;
+
+}
+header {
+    padding: 15px 0; /*Espacio interno del elemento*/
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;/*ocupe el ancho de pantalla junto a la imagen*/
+
+}
+
+
+header .container {
+    display: flex; /*Los hijos se vuelven flexibles; sería el nav y la imagen*/
+    justify-content: space-between; /*alinea los elementos en base al eje x*/
+    align-items: center;/*alinea los elementos en base al eje y*/
+}
+header .container .logo {
+    width: 100px;
+}
+header .container nav a {
+    color: red;
+    text-decoration: none;
+    margin:0 15px; /*Espacio externo al elemento*/
+}
+.boton {
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 30px;
+}
+.boton.boton-rojo { /*significa dos clases, si pusiera .boton boton-rojo con ese espacio, tomaría como que uno están dentro del otro*/
+    color: white;
+    background-color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+.seccion {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.container {
+    width: 1140px;
+    margin: 0 auto; /*Permite que el espacio derecho e izquierdo sean iguales*/
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.row {
+    display: flex;/*Es el padre de columnas*/
+    flex-wrap: wrap; /*Si las columnas por su ancho, no entran, hace que vayan a hacia abajo*/
+}
+.columna {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.columna-33 {
+    width: 33.33%;
+}
+#inicio {
+    position: relative; /*Lo natural, es la posición estática, en elementos en bloques, quedan uno debajo de otro. La posición relativa permite moverlos. Su espacio reservado va a permanecer. La posición absoluta, además de mover el elemento, el espacio que ocupaba no permanece*/
+
+}
+#inicio img {
+    width: 100%; /*la imagen ocupará el 100% de la pantalla*/
+    display: block;/*Es un elemento en linea, de manera, que lo cambio a bloque, para que no genere espacio en los laterales*/
+}
+#inicio .bloque-inicio {
+    position: absolute;/*sólo funciona bien, si dentro de un elemento con posición relativa*/
+    top:40%;
+    left: 50%;
+    width: 400px;
+    text-align: center;/*centra tanto texto como elementos inline, por ejemplo, a*/
+    margin-left: -200px;/*sólo el margin puede trabajar con valores negativos*/
+
+}
+#inicio .bloque-inicio h1 {
+    color: white;
+    font-size: 35px;
+}
+#inicio .bloque-inicio p {
+    color: white;
+    font-size: 16px;
+
+}
+    
+#nosotros{
+    background-image: url(img/latas.jpg);/*coloca imagen de fondo*/
+    background-size: cover;/*ocupa todo el espacio que tenga*/
+    color: white;
+    text-align: center;
+}
+#nosotros p {
+    color:white;
+    text-align: center;
+    font-size: 16px;
+    /*margin: 0; */
+}
